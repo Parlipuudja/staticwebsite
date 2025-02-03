@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expand Text</title>
+</head>
+<body>
+  <h1>Expand Text</h1>
+  <form id="expandTextForm">
+    <label for="inputText">Enter Text:</label>
+    <textarea id="inputText" name="inputText" rows="4" cols="50"></textarea>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById('expandTextForm').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const inputText = document.getElementById('inputText').value;
+      const response = await fetch('/api/expand-text', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ input_text: inputText }),
+      });
+      const data = await response.json();
+      document.getElementById('result').innerText = data.expandedText;
+    });
+  </script>
+</body>
+</html>
