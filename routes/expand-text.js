@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Expandtext = require('Components\expand_text\expand_text.ts');
+const Expandtext = require('expand_text.ts');
 
 router.post('/expand-text', async (req, res) => {
   const { input_text } = req.body;
