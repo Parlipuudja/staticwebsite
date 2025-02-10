@@ -9,7 +9,7 @@ const port = 3000
 
 app.use(bodyParser.json())
 app.use("/api", expandTextRouter)
-app.use(express.static(path.join(__dirname, "@", "public")))
+app.use(express.static('public'))
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`)

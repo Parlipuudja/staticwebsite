@@ -23,7 +23,7 @@
         "@/*": ["./*"]
       }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/routes/expand-text.js", "src/app/index.js"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/routes/expand-text.js", "src/app/index.js", "src/Components/expand_text/expand_text.jhs"],
     "exclude": ["node_modules"]
   }
   

@@ -1,6 +1,6 @@
 require("module-alias/register")
 const express = require('express')
-const Expandtext = require('@/Components/expand_text/expand_text.ts')
+const Expandtext = require('@/Components/expand_text/expand_text.js')
 const expandTextRouter = express.Router()
 
 
